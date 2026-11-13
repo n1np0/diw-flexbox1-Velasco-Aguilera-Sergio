@@ -437,3 +437,94 @@ textarea.campo__control {
     grid-template-columns: 2fr 1fr;
   }
 }
+
+:root {
+  /* Paleta base */
+  --color-primario: #12355b;
+  --color-fondo-pagina: #f4f6f9;
+  --color-fondo-tarjeta: #ffffff;
+  --color-texto: #1b1b1b;
+  --color-texto-ayuda: #4a5568;
+  --color-borde-control: #5b6b7f;
+  --color-borde-tarjeta: #b7c0cc;
+  --color-invalido: #b3261e;
+  --color-foco: #0a5bd3;
+  --color-foco-oscuro: #ffd166;
+  --color-enlace-oscuro: #cbd5e1;
+
+  /* Nuevos colores de la Parte C */
+  --color-primario-degradado: #1f5088;
+  --color-boton-hover: #e3ebf5;
+  --color-boton-principal-hover: #0b2340;
+  --color-sombra-bloque: rgb(18 53 91 / 0.2);
+  --color-sombra-texto: rgb(0 0 0 / 0.45);
+}
+
+.grupo {
+  background-color: var(--color-fondo-tarjeta);
+  border: 1px solid var(--color-borde-tarjeta);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.125rem 0.5rem var(--color-sombra-bloque);
+}
+
+.grupo__titulo {
+  color: var(--color-primario);
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0 0.5rem;
+}
+
+.cabecera__marca{
+  color: var(--color-fondo-tarjeta);
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-shadow: 0,0625rem 0,125rem var(--color-sombra-texto) 
+}
+
+.boton--principal{
+  box-shadow: 0,125rem 0,25rem ;
+}
+
+.boton--principal {
+  background-color: var(--color-primario);
+  color: var(--color-fondo-tarjeta);
+  border: 2px solid var(--color-primario);
+  box-shadow: 0 0.125rem 0.25rem var(--color-sombra-bloque);
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton--principal:hover,
+.boton--principal:focus-visible {
+  background-color: var(--color-boton-principal-hover);
+  transform: translateY(-0.125rem);
+}
+
+.boton--principal:active {
+  transform: translateY(0);
+  box-shadow: 0 0.0625rem 0.125rem var(--color-sombra-bloque);
+}
+
+.cabecera,
+.pie {
+  background-color: var(--color-primario);
+  background-image: linear-gradient(to right, var(--color-primario), var(--color-primario-degradado));
+}
+
+.ayuda__numero {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--color-primario);
+  color: var(--color-fondo-tarjeta);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.ayuda__paso:hover .ayuda__numero {
+  transform: scale(1.1);
+}
